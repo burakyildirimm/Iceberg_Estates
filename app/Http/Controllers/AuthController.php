@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Validator;
-
+use Carbon\Carbon;
 
 class AuthController extends Controller
 {
@@ -58,9 +58,15 @@ class AuthController extends Controller
         }
 
         $user = User::create(array_merge(
-                    $validator->validated(),
-                    ['password' => bcrypt($request->password)]
-                ));
+            $validator->validated(),
+            ['password' => bcrypt($request->password)]
+        ));
+        
+        $remember_token = bcrypt($request->email . Carbon::now()->timestamp);
+        
+        $user->refresh_token = $remember_token;
+
+        $new_user = User::find($user->id)->update(['remember_token' => $remember_token]);
 
         return response()->json([
             'message' => 'User successfully registered',
