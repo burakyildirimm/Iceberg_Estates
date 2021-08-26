@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\AuthController;
+use \App\Http\Controllers\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,15 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
+});
+
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'appointment'
+
+], function ($router) {
+    Route::post('/create', [AppointmentController::class, 'create']);
+    Route::post('/update', [AppointmentController::class, 'update']);
+    Route::post('/delete', [AppointmentController::class, 'delete']);
 });
