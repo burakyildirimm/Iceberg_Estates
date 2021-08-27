@@ -76,6 +76,12 @@ class AppointmentController extends ClientController
         $contact = Contact::updateOrCreate(['email' => $request->email], $contact_arr);
         
 
+        $isFree = Appointment::whereBetween('checkout', [$est_checkout, $est_checkin])->orWhereBetween('checkin', [$est_checkout, $est_checkin])->get();
+
+        if ( count($isFree) > 0 ) {
+            return response()->json(['error: ' => 'This date is full. Please choose another date!'], 406);
+        }
+
         # update or create the appointment.
         $appointment = Appointment::updateOrCreate([
             'consultant_id' => auth()->user()->id,
