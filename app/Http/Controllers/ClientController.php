@@ -32,7 +32,7 @@ class ClientController extends Controller
         return $this->makePostRequest($url, $params);
     }
 
-    public function obtainDistance($key, $origin, $destination) {
+    public function obtainCalculations($key, $origin, $destination) {
         $url = 'https://api.distancematrix.ai/maps/api/distancematrix/json';
         $params['origins'] = $origin;
         $params['destinations'] = $destination;
