@@ -50,5 +50,5 @@ We want to develop an API system that will solve the problems of real estate age
 
 ## Endpoints Documentation Link on Postman
 
-<a href="https://www.postman.com/burak34/workspace/iceberg-estates/documentation/10659077-d3dad476-fff1-47aa-964e-f9e8810f08f3">Documentation Link</a>
+<a href="https://www.postman.com/burak34/workspace/iceberg-estates/documentation/10659077-d3dad476-fff1-47aa-964e-f9e8810f08f3" target="_blank">Documentation Link</a>
 
