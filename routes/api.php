@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\AuthController;
 use \App\Http\Controllers\AppointmentController;
+use \App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,14 @@ Route::group([
     Route::post('/create', [AppointmentController::class, 'create']);
     Route::post('/update', [AppointmentController::class, 'update']);
     Route::post('/delete', [AppointmentController::class, 'delete']);
+});
+
+
+Route::group([
+    'middleware'    => 'api',
+    'prefix'        => 'contact' 
+], function ($router) {
+    Route::post('/create', [ContactController::class, 'create']);
+    Route::post('/update', [ContactController::class, 'update']);
+    Route::post('/delete', [ContactController::class, 'delete']);
 });

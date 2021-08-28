@@ -24,6 +24,7 @@ class CreateAppointmentsTable extends Migration
             $table->dateTime('checkin');
             $table->string('address');
             $table->timestamps();
+            $table->softDeletes();
         });
 
     }

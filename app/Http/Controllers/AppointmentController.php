@@ -159,6 +159,13 @@ class AppointmentController extends ClientController
      * @return \Illuminate\Http\JsonResponse
      */
     public function delete(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'id'    =>  'required|integer',
+        ]);
+        if ( $validator->fails() ) {
+            return response()->json($validator->errors(), 422);
+        }
+
         // $appointment = Appointment::find($request->id)->delete();
         $appointment=Appointment::where(
         [
