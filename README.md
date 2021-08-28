@@ -22,27 +22,27 @@ We want to develop an API system that will solve the problems of real estate age
 5. Download the project from this repo and open through vscode or with alternatives.
 6. Open the terminal (Make sure it's in the same location with the project.) and install packages for jwt token following below code.
 
-    ***composer require tymon/jwt-auth --ignore-platform-reqs***
+>    ***composer require tymon/jwt-auth --ignore-platform-reqs***
     
 7. Duplicate .env.example file and rename to .env
 8. Create a new key for new laravel project following below code.
 
-    ***php artisan key:generate***
+>    ***php artisan key:generate***
     
 9. Define custom variables in config file and don't forget clear the cache of the config files.
 
-    ***php artisan config:cache***
+>    ***php artisan config:cache***
     
 11. Let's we start the project with command is below.
 
-    ***php artisan serve***
+>    ***php artisan serve***
     
 11. If you are working on the local system open chrome and navigate the below link that is use adminer for mysql database interface. Then type root as username and type the password you set.
 12. Create a new database named Iceberg_Estates.
 13. Configure .env file for db connection.
 14. Last step is migration process of the tables code is below.
 
-    ***php artisan migrate***
+>    ***php artisan migrate***
     
 15. Our project is ready, let's start now.
 
