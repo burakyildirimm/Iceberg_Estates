@@ -20,12 +20,12 @@ We want to develop an API system that will solve the problems of real estate age
 3. Download and install composer on your system.
 4. Install laravel through composer.
 5. Download the project from this repo and open through vscode or with alternatives.
-6. Open the terminal (Make sure it's in the same location with the project.) and install packages for jwt token fallowing below code.
+6. Open the terminal (Make sure it's in the same location with the project.) and install packages for jwt token following below code.
 
     ***composer require tymon/jwt-auth --ignore-platform-reqs***
     
 7. Duplicate .env.example file and rename to .env
-8. Create a new key for new laravel project fallowing below code.
+8. Create a new key for new laravel project following below code.
 
     ***php artisan key:generate***
     
