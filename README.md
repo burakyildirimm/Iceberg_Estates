@@ -29,7 +29,7 @@ We want to develop an API system that will solve the problems of real estate age
 
 >    ***php artisan key:generate***
     
-9. Define custom variables in config file and don't forget clear the cache of the config files.
+9. Define custom variables in config/constants.php file and don't forget clear the cache of the config files.
 
 >    ***php artisan config:cache***
     
