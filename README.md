@@ -46,6 +46,9 @@ We want to develop an API system that will solve the problems of real estate age
 >    ***php artisan serve***
     
 13. If you are working on the local system open chrome and navigate the below link that is use adminer for mysql database interface. Then type root as username and type the password you set.
+
+>    ***localhost:8000/adminer.php***
+
 14. Create a new database named Iceberg_Estates.
 15. Configure .env file for db connection.
 16. Last step is migration process of the tables code is below.
